@@ -1,0 +1,32 @@
+﻿@model IEnumerable<View_Models.ViewModels.EmployeeDetailsViewModel>;
+
+@{
+    ViewData["Title"] = "Info";
+}
+
+    <h1>Lista de objetos del ViewModel EmployeeDetailsViewModel</h1>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">RFC</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">IdEmpleado</th>
+            <th scope="col">Area</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var a in Model)
+        {
+            <tr>
+                <th scope="row">@a.persona.RFC<th>
+                <td>@a.persona.Nombre</td>
+                <td>@a.empleado.ID<td>
+                <td>@a.empleado.area<td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>
+
